@@ -1,0 +1,30 @@
+<%if @errors %>
+  <div class="error-box"><h1><%= @errors %></h1></div>
+<% end %>
+<% if @device && @device.valid_response? %>
+  <section class="product-info">
+    <ul class="prod-list clearfix">
+      <li>
+        <span class="subheading">Model</span>
+        <span class="value"><%= @device.description %></span>
+      </li>
+      <li>
+        <span class="subheading">Ship Date</span>
+        <span class="value"><%= @device.ship_date %></span>
+      </li>
+      <li>
+        <span class="subheading">Warranty Status</span>
+        <% @device.warranties.each do |warranty| %>
+          <span class="value">
+            <span class="mega-octicon <%= warranty_icon(warranty) %>"></span>
+            <%= warranty["ServiceLevelDescription"] %>
+          </span>
+        <% end %>
+      </li>
+    </ul>
+  </section>
+<% else %>
+  <section class="placeholder">
+    <h2>Search for a service tag to see warranty information.</h1>
+  </section>
+<% end %>

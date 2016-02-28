@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dell Warranty Status</title>
+  <link rel="stylesheet" type="text/css" href="/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.4.1/octicons.min.css">
+</head>
+<body>
+  <header class="header">
+    <a href="/"><h1>Dell Warranty Status</h1></a>
+    <div class="search-box">
+      <h2>Dude, you're getting a Dell!</h2>
+      <form action="/" method="get">
+        <input type="text" name="service_tag" autofocus value="<%= params[:service_tag] %>" maxlength="7"/>
+      </form>
+    </div>
+  </header>
+  <%== yield %>
+</body>
+</html>

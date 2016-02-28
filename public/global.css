@@ -1,0 +1,141 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+
+body {
+	color: #5d5d5d;
+	background: #F5F5F8;
+	font: 13px/1.6em 'Helvetica Neue', sans-serif;
+	height: 100%;
+	line-height: normal;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:hover{
+  color: #2487c9;
+}
+
+.header{
+  background: #0095CA;
+  padding: 35px;
+}
+  .header h1{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+.search-box{
+  padding: 5px 0;
+  width: 300px;
+  margin: 10px auto;
+}
+  .search-box h2{
+    color: #b7d9e4;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .search-box input{
+    border: none;
+    background: #127FA8;
+    width: 300px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px #0D6889;
+    padding: 8px 3px;
+    font-size: 30px;
+    color: #fff;
+    outline: 0;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+  }
+
+.error-box{
+  max-width: 750px;
+  padding: 15px;
+  text-align: center;
+  margin: 25px auto;
+  background: #fff;
+  color: #e74c3c;
+}
+
+.product-info{
+  margin: 15px auto;
+  background: #fff;
+  padding: 20px 25px;
+  max-width: 960px;
+}
+
+.prod-list li{
+  list-style-type: none;
+  margin: 8px 0;
+}
+  .prod-list span{
+    display: block;
+  }
+
+  .prod-list span.mega-octicon{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    border-radius: 80px;
+  }
+
+  .prod-list span.mega-octicon.active{
+    background: #2ecc71;
+  }
+
+  .prod-list span.mega-octicon.expired{
+    background: #e74c3c;
+  }
+
+  .prod-list .subheading{
+    color: #222;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .prod-list .value{
+    color: #0095CA;
+    font-size: 25px;
+    padding: 5px 0;
+    font-weight: 300;
+  }
+
+.placeholder{
+  padding: 25px;
+}
+  .placeholder h2{
+    text-align:center;
+    color: #c3c3d5;
+    text-shadow: 0 1px 0 #fff;
+  }
