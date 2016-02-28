@@ -23,8 +23,8 @@ get '/' do
   end
 end
 
-def warranty_icon(warranty)
-  Time.parse(warranty["EndDate"]) > Time.now ? "octicon-check active" : "octicon-x expired"
+def warranty_icon(enddate)
+  Time.parse(enddate) > Time.now ? "octicon-check active" : "octicon-x expired"
 end
 
 class ServiceTag

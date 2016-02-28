@@ -11,11 +11,18 @@
       </li>
       <li>
         <span class="subheading">Warranty Status</span>
-        <% @device.warranties.each do |warranty| %>
+        <% if @device.warranties.is_a?(Hash) %>
           <span class="value">
-            <span class="mega-octicon <%= warranty_icon(warranty) %>"></span>
-            <%= warranty["ServiceLevelDescription"] %>
+            <span class="mega-octicon <%= warranty_icon(@device.warranties['EndDate']) %>"></span>
+            <%= @device.warranties["ServiceLevelDescription"] %>
           </span>
+        <% else %>
+          <% @device.warranties.each do |warranty| %>
+            <span class="value">
+              <span class="mega-octicon <%= warranty_icon(warranty['EndDate']) %>"></span>
+              <%= warranty["ServiceLevelDescription"] %>
+            </span>
+          <% end %>
         <% end %>
       </li>
     </ul>
